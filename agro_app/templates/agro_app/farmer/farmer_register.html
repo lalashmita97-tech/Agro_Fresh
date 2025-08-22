@@ -8,20 +8,13 @@
   <title>Register</title>
   {% include 'agro_app/common/common_css.html'%}
   <style>
-    .outer {
-      width: 35%;
-      height: 100px;
-      padding: 70px;
-      gap: 10px;
-      justify-content: center;
-    }
+ 
 
     .div-form {
-      width: 30%;
+      width: 37%;
       height: auto;
       background-color: rgb(165, 167, 169);
-      /* border: 2px solid rgb(55, 9, 18); */
-      padding: auto;
+      padding: 20px 20px 20px 20px;
       margin-top: 10px;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur 12px;
@@ -55,30 +48,30 @@
     <form method="post" action="/register/" enctype="multipart/form-data">
       {% csrf_token %}
 
-      <div class="container-fluid d-flex justify-content-center" style="margin-right: 80px; margin-top: -34px;">
-        <div class="w-50 div-form">
+      <div class="container-fluid d-flex justify-content-center" style="margin-top:5px; margin-bottom: 15px;">
+        <div class=" div-form" style="padding: 20px 20px 20px 20px;">
           <div class="form-floating mb-3"
-            style="margin-left: 50px; margin-top: 40px; display: block; filter: drop-shadow(0 0 10px #53170d);">
+            style=" margin-top: 25px; display: block; filter: drop-shadow(0 0 10px #53170d);">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email"
               required>
             <label for="floatingInput">Enter Email here</label>
           </div>
 
           <div class="form-floating mb-3"
-            style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px  #53170d);">
+            style=" display: block; filter: drop-shadow(0 0 10px  #53170d);">
             <input type="password" class="form-control" id="floatingInput" placeholder="password" name="password"
               required>
             <label for="floatingInput">Enter password here</label>
           </div>
 
           <div class="form-floating mb-3"
-            style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px #53170d);">
+            style=" display: block; filter: drop-shadow(0 0 10px #53170d);">
             <input type="text" class="form-control" id="floatingTextarea2" placeholder="name" name="name" required>
             <label for="floatingPassword">Enter name here</label>
           </div>
 
           <div class="form-floating mb-3"
-            style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px#53170d);">
+            style=" display: block; filter: drop-shadow(0 0 10px#53170d);">
             <input type="number" class="form-control" id="floatingInput" placeholder="phone_number" name="phone"
               required>
             <label for="floatingInput">Enter Phone Number here</label>
@@ -86,27 +79,27 @@
 
 
           <div class="form-floating mb-3"
-            style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px #53170d);">
+            style="display: block; filter: drop-shadow(0 0 10px #53170d);">
             <input type="text" class="form-control" id="floatingInput" placeholder="city" name="city" required>
             <label for="floatingInput">Enter city here</label>
           </div>
 
 
           <div class="form-floating mb-3"
-            style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px #53170d);">
+            style="display: block; filter: drop-shadow(0 0 10px #53170d);">
             <input type="text" class="form-control" id="floatingInput" placeholder="address" name="address" required>
             <label for="floatingInput">Enter address here</label>
           </div>
 
           <div class="form-floating mb-3"
-            style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px #53170d);">
+            style="display: block; filter: drop-shadow(0 0 10px #53170d);">
             <input type="file" class="form-control" placeholder="Enter profile_pic" name="profile_pic" required>
             <label for="profile">Enter Profile Pic</label>
           </div>
 
 
           <div class="container-fluid d-flex justify-content-center">
-            <button type="submit" class="btn btn-success">Submit</button>
+          <button type="submit" class="btn btn-success">Submit</button>
           </div>
 
         </div>

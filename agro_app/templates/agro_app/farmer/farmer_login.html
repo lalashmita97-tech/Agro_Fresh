@@ -28,7 +28,7 @@
             height: 350px;
             background-color: rgb(165, 167, 169);
             /* border: 2px solid rgb(55, 9, 18); */
-            padding: 80px;
+            padding:40px 80px 80px 80px;
             margin-top: 40px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur 12px;
@@ -94,15 +94,11 @@
 
         <div class="flex-container">
 
-                        <!-- <div class="div-img">
-                    <img src="{% static  '/agro_app/images/peas.jpg' %}" alt="">
-                </div>  -->
-
             <div class="div-form">
 
                 <form action="/login/" method="post">
                     {% csrf_token %}
-
+                <h2 class="text-center" style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:45px;">Login</h2>
                     <div class="input-group mb-3" style="filter: drop-shadow(0 0 10px #6d7114);">
                         <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
                         <input type="email" class="form-control" placeholder="Email" name="email" required>

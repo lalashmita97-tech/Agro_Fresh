@@ -8,7 +8,27 @@
   <title>Contact</title>
 
   {% include 'agro_app/common/common_css.html'%}
+<style>
+   .div-form {
+      width: 37%;
+      height: auto;
+      background-color: rgb(165, 167, 169);
+      padding: 20px 20px 20px 20px;
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur 12px;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 0px 25px rgba(0, 255, 255, 0.2);
+      z-index: 1;
+      transition: 0.4s ease;
+    }
 
+    .div-form:hover {
+      box-shadow: 0 0px 35px #6d7114;
+      transform: scale(1.02);
+    }
+    </style>  
 </head>
 
 <body>
@@ -24,35 +44,35 @@
         
     <form  action="/contact/" method="post">
       {% csrf_token%}
-        <div style="margin-right:69px; width: 500px;">
+        <div class="div-form"  style="margin-right:69px; width: 500px;">
           <h1 class="text-center"
             style="font-family:Georgia, 'Times New Roman', Times, serif;color: rgb(10, 26, 43);font-size: 70px;margin-top: 20px;">
             Contact Us</h1>
           
         <div class="form-floating mb-3"
-            style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px #20616b);">
+            style="display: block; filter: drop-shadow(0 0 10px #20616b);">
             <input type="text" class="form-control" id="floatingInput" placeholder="name" name="name" required>
             <label for="floatingInput">Name</label>
           </div>
 
           <div class="form-floating mb-3"
-            style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px #20616b);">
+            style=" display: block; filter: drop-shadow(0 0 10px #20616b);">
             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required>
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating mb-3"
-            style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px #20616b);">
+            style="display: block; filter: drop-shadow(0 0 10px #20616b);">
             <input type="number" class="form-control" id="floatingInput" placeholder="phone_number" name="phone" required>
             <label for="floatingInput">Phone Number</label>
           </div>
 
-          <div class="form-floating" style="margin-left: 50px; display: block; filter: drop-shadow(0 0 10px #20616b);">
+          <div class="form-floating" style="display: block; filter: drop-shadow(0 0 10px #20616b);">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
               style="height: 100px" name="query" required></textarea>
             <label for="floatingTextarea2">Question</label>
           </div>
 
-          <div class="container-fluid d-flex justify-content-center" style="margin-left: 30px; margin-top: 16px;">
+          <div class="container-fluid d-flex justify-content-center" style=" margin-top: 16px;">
             <!-- <button type="button" class="btn btn-outline-warning mt-3">Submit</button> -->
             <button type="submit" class="btn btn-success">Submit</button>
           </div>

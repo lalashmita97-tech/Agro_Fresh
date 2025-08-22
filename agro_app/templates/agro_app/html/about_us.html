@@ -8,6 +8,9 @@
      <title>About Us</title>
      {% include 'agro_app/common/common_css.html'%}
      <style>
+          *{
+               margin: 0px;
+          }
           .text-font {
                text-align: center;
                margin: auto;
@@ -26,12 +29,13 @@
                margin-top: 60px;
                width: 100%;
                height: auto;
+               margin-bottom: 20px;
           }
 
 
 
           .video-container {
-               width: 1000px;
+               width: 100%;
                height: 700px;
 
           }
@@ -51,7 +55,7 @@
 
           .video-content {
                position: absolute;
-               top: 20%;
+               top: 38%;
                left: 50%;
                transform: translate(-50%,-50%);
                color: white;
@@ -61,7 +65,7 @@
                margin:50px;
           }
           .video-content:hover{
-               color: rgb(155, 155, 110);
+               color: rgb(225, 144, 31);
           }
           @keyframes slideDown{
           from{
@@ -94,13 +98,8 @@
      {% include 'agro_app/common/header.html' %}
      <div class="main-div">
 
-          <h3 style="background-color:  rgb(21, 47, 21); text-align: center;font-family: 'Times New Roman', Times, serif; color: rgb(155, 155, 110);">
+          <h3 style="background-color:  rgb(21, 47, 21); text-align: center;font-family: 'Times New Roman', Times, serif; color: rgb(155, 155, 110); margin-bottom: 0px;">
                🌱Welcome to AgroFresh-Where Farmers and Customers Connect Directly!🌱</h3>
-
-          <!-- <div class="text-font">
-               <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 47px;">About AgroFresh</h1>
-               <p><strong>Empowering Farmers. Serving Freshness. Connecting Communities.</strong></p>
-          </div> -->
 
           <div class="video-container">
 
@@ -109,7 +108,7 @@
                </div>
 
                <div class="video-content">
-                    <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px;">About AgroFresh</h1>
+                    <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;font-size: 88px;">About AgroFresh</h1>
                     <p><strong>Empowering Farmers. Serving Freshness. Connecting Communities.</strong></p>
                </div>
 
@@ -139,10 +138,10 @@
                </div>
 
                <div class="d-flex justify-content-center gap-5">
-                    <div class="w-50 who">
+                    <div class="w-50 who" style="margin-left: 10px;" >
 
                          <img src="{%static 'agro_app/images/mission.jpg'%}" alt=""
-                              style="width: 100%; margin-left: 10px; border-radius: 25px 25px 25px 25px;">
+                              style="width: 100%;  border-radius: 25px 25px 25px 25px;">
                     </div>
 
                     <div class="w-50 text-center">
@@ -181,10 +180,10 @@
                               and an empowered farming community. Together, we are not just changing how food is sold —
                               we are reshaping the future of agriculture.</p>
                     </div>
-                    <div class="w-50 who">
+                    <div class="w-50 who" style="margin-right: 10px;">
 
-                         <img src="{%static 'agro_app/images/who we are.jpg'%}" alt=""
-                              style="width: 100%; margin-right:10px; border-radius: 25px 25px 25px 25px;">
+                         <img src="{%static 'agro_app/images/home2.jpg'%}" alt=""
+                         style="width: 100%; margin-right:10px; border-radius: 25px 25px 25px 25px;">
                     </div>
                </div>
 </div>
