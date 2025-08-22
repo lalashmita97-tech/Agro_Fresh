@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fats Rich Food</title>
+   {% include 'agro_app/common/common_css.html'%}
+   <style>
+     .bgimage{
+    background-image: url("{%static 'agro_app/images/fat22.jpg' %}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(10%) brightness(0.8);
+    }
+
+    .shape{
+      border-radius: 100px;
+      height: 200px;
+      width: 200px;
+      margin:35px 130px 120px 130px;
+  
+    }
+
+    .flex-container{
+      width: 100%;
+      display: flex;
+      gap:40px;
+      justify-content:center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    </style>
+</head>
+<body>
+    {% include 'agro_app/common/header.html'  %}
+<div class="main-div">
+    <div class= "bgimage" style="width: 100%; height: 399px;"> </div>
+
+
+     <div class="container-fluid d-flex justify-content-center">
+      <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; margin-top: -42px; font-size:65px; display: block; filter: drop-shadow(0 0 10px #8bf40a);">Healthy Fat-Rich Food</h1>
+</div>
+
+<p style="font-family: Arial, Helvetica, sans-serif;margin-left:9px;">Fats are one of the three essential macronutrients your body needs, along with proteins and carbohydrates. They provide the most concentrated source of energy — giving 9 calories per gram, compared to 4 calories from carbs or protein. Though often misunderstood, fats play a vital role in keeping you healthy, when consumed in the right form and amount.
+    Fats are important for several bodily functions. They help in the absorption of fat-soluble vitamins like A, D, E, and K, which are crucial for immunity, vision, and bone strength. They also protect your internal organs by acting as a cushion and help regulate body temperature by providing insulation.
+Fats are also essential for brain development, especially in children. They are needed to build the protective layer around nerve cells and support hormone production, especially reproductive hormones.</p>
+ 
+ <div class="flex-container">
+
+        <div class="shape">
+      <img src="{% static 'agro_app/images/coco.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Coconut</h2>
+     </div>
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/avo.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Avocados</h2>
+    </div>
+
+<!-- 
+      <div class="shape">
+      <img src="{% static 'agro_app/images/chia.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Chia Seeds</h2>
+     </div> -->
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/cho.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Dark Chocolate</h2>
+     </div>
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/ghee.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Ghee</h2>
+    </div>
+
+      <!-- <div class="shape">
+      <img src="{% static 'agro_app/images/heap.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Macadamia Nuts</h2>
+    </div> -->
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/walnut.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Walnuts</h2>
+    </div>
+
+      <!-- <div class="shape">
+      <img src="{% static 'agro_app/images/olive.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Olive</h2>
+    </div> -->
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/peanut.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Peanuts</h2>
+    </div>
+
+      </div>
+
+
+</div>
+<!-- footer code start  -->
+
+{% include 'agro_app/common/footer.html'%}
+<!-- footer code end  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+</body>
+</html>     

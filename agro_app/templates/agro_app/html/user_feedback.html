@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>feedback</title>
+
+  {% include 'agro_app/common/common_css.html'%}
+  <style>
+    .div-form {
+      width: 40%;
+      height: auto;
+      background-color: rgb(165, 167, 169);
+      /* border: 2px solid rgb(55, 9, 18); */
+      padding: 40px  80px 10px 80px;
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur 12px;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 0px 25px rgba(0, 255, 255, 0.2);
+      z-index: 1;
+      transition: 0.4s ease;
+    }
+    
+        .div-form:hover {
+            box-shadow: 0 0px 35px #6d7114;
+            transform: scale(1.02);
+        }
+
+    .flex-container {
+      display: flex;
+      width: 98%;
+      gap: 20px;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-div">
+    {% include 'agro_app/common/header.html' %}
+
+    <h3 style="font-family: 'Times New Roman', Times, serif;background-color: rgb(21, 47, 21);color: rgb(155, 155, 110); text-align: center;">👉"Your
+      opinion matters — help us serve you better."👈</h3>
+
+    <form action="/feedback/" method="post">
+      {% csrf_token%}
+
+      <div class="flex-container">
+        <div class="div-form">
+          <div class="w-100 mx-auto" style="margin-top: 5px;">
+            <h3 class="text-center"
+              style="font-family:Georgia, 'Times New Roman', Times, serif;color: rgb(7, 25, 42); font-size: 36px;">We’d Love Your Feedback!</h3>
+            <div class="form-floating mb-3" style="filter: drop-shadow(0 0 10px #a86718);">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name" name="name" required>
+              <label for="floatingInput">Name</label>
+            </div>
+
+            <div class="form-floating mb-3" style="filter: drop-shadow(0 0 10px #a86718);">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email"
+                required>
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="col-mb-3" style="filter: drop-shadow(0 0 10px #a86718);">
+              <label for="inputState" class="form-label">Select Ranking</label>
+              <select id="inputState" class="form-select" name="rating" required>
+                <option value="">Rating</option>
+                <option>⭐</option>
+                <option>⭐⭐</option>
+                <option>⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐⭐</option>
+              </select>
+            </div>
+
+            <div class="form-floating" style="margin-top: 18px; filter: drop-shadow(0 0 10px #a86718);">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                style="height: 100px" name="remarks" required></textarea>
+              <label for="floatingTextarea2">Remarks</label>
+            </div>
+
+            <div class="container-fluid d-flex justify-content-center" style="margin-top: 16px;">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </form>
+
+    {% if messages %}
+    {% for m in messages %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert"
+      style="width: 50%;margin: auto;text-align: center;">
+      <strong>{{m}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+
+
+    {% endif %}
+
+
+  </div>
+  <!-- footer code start  -->
+  {% include 'agro_app/common/footer.html'%}
+  <!-- footer code end  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% include 'agro_app/common/common_css.html'%}
+
+    <style>
+        .flex-container {
+            display: flex;
+            width: 98%;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .div-img {
+            width: 25%;
+            height: 250px;
+            border: 2px solid rgb(75, 17, 18);
+            border-radius: 30% 30% 30% 30%;
+        }
+
+        .div-form {
+            width: 30%;
+            height: 350px;
+            background-color: rgb(165, 167, 169);
+            /* border: 2px solid rgb(55, 9, 18); */
+            padding: 80px;
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur 12px;
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 0px 25px rgba(0, 255, 255, 0.2);
+            z-index: 1;
+            transition: 0.4s ease;
+        }
+
+        .div-form:hover {
+            box-shadow: 0 0px 35px #6d7114;
+            transform: scale(1.02);
+        }
+
+        .div-img img {
+            width: 95%;
+            height: 100%;
+            border: 2px solid rgb(55, 9, 18);
+            border-radius: 30%;
+        }
+
+        .bgimage {
+            background-image: url("{%static 'agro_app/images/login3.jpg' %}");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar code start -->
+    {% include 'agro_app/common/header.html' %}
+    <!-- navbar code ends -->
+
+    <h3 style="font-family: 'Times New Roman', Times,serif;text-align: center; background-color: rgb(21, 47, 21);color: rgb(155, 155, 110)">🔗🔗 “Your
+        Farm-to-Family Journey Starts Here” 🔗🔗</h3>
+    {% if messages %}
+    {% for m in messages %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert"
+        style="width: 50%;margin: auto;text-align: center;">
+        <strong>{{m}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+
+    {% endfor %}
+
+
+    {% endif %}
+
+
+
+
+    <div class="main-div">
+
+        <div class="text-center" style="margin-top: 20px;">
+            <img src="{% static  '/agro_app/images/agro.gif' %}" alt="">
+        </div>
+
+        <!-- flex box code start -->
+
+        <div class="flex-container">
+
+                        <!-- <div class="div-img">
+                    <img src="{% static  '/agro_app/images/peas.jpg' %}" alt="">
+                </div>  -->
+
+            <div class="div-form">
+
+                <form action="/login/" method="post">
+                    {% csrf_token %}
+
+                    <div class="input-group mb-3" style="filter: drop-shadow(0 0 10px #6d7114);">
+                        <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" class="form-control" placeholder="Email" name="email" required>
+                    </div>
+
+                    <div class="input-group mb-3" style="filter: drop-shadow(0 0 10px #6d7114);">
+                        <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" class="form-control" placeholder="Password" name="password" required>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success" style="text-align: center;">Submit</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- footer code start  -->
+    {% include 'agro_app/common/footer.html'%}
+    <!-- footer code end  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

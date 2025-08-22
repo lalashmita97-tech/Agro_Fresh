@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>About Us</title>
+     {% include 'agro_app/common/common_css.html'%}
+     <style>
+          .text-font {
+               text-align: center;
+               margin: auto;
+          }
+
+          .font {
+               display: flex;
+               text-align: start;
+               margin: auto;
+
+          }
+
+
+
+          .outer {
+               margin-top: 60px;
+               width: 100%;
+               height: auto;
+          }
+
+
+
+          .video-container {
+               width: 1000px;
+               height: 700px;
+
+          }
+
+          .video {
+               width: 100%;
+               height: 100%;
+               filter: brightness(0.5) grayscale(10%);
+               position: relative;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               overflow: hidden;
+               position: absolute;
+
+          }
+
+          .video-content {
+               position: absolute;
+               top: 20%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               color: white;
+               animation: slideDown 2s ease-out forwards;
+               text-shadow: 2px 2px 5px #000;
+               /* top:100px; */
+               margin:50px;
+          }
+          .video-content:hover{
+               color: rgb(155, 155, 110);
+          }
+          @keyframes slideDown{
+          from{
+               /* top:-100px; */
+               transform: translate(-50%,-100%);
+               opacity:0;
+          }
+          to{
+               /* top:30%; */
+               transform: translate(-50%,0%);
+               opacity: 1;
+          }
+          }
+
+          .who {
+               transition: transform 0.3s;
+               box-shadow:0 8px 16px rgb(0,0,0.8);
+               border-radius: 25px 25px 25px 25px;
+               
+          }
+
+          .who:hover {
+
+               transform: scale(1.02);
+          }
+     </style>
+</head>
+
+<body>
+     {% include 'agro_app/common/header.html' %}
+     <div class="main-div">
+
+          <h3 style="background-color:  rgb(21, 47, 21); text-align: center;font-family: 'Times New Roman', Times, serif; color: rgb(155, 155, 110);">
+               🌱Welcome to AgroFresh-Where Farmers and Customers Connect Directly!🌱</h3>
+
+          <!-- <div class="text-font">
+               <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 47px;">About AgroFresh</h1>
+               <p><strong>Empowering Farmers. Serving Freshness. Connecting Communities.</strong></p>
+          </div> -->
+
+          <div class="video-container">
+
+               <div class="video">
+                    <video src="{%static 'agro_app/images/about1.mp4'%}" autoplay loop style="width: 100%;"></video>
+               </div>
+
+               <div class="video-content">
+                    <h1 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 50px;">About AgroFresh</h1>
+                    <p><strong>Empowering Farmers. Serving Freshness. Connecting Communities.</strong></p>
+               </div>
+
+          </div>
+
+          <div class="outer">
+               <div class="d-flex justify-content-center gap-5">
+
+                    <div class="w-50 text-center">
+                         <h2 style="margin-top:100px;">1️⃣ Who We Are </h2>
+
+                         <p style="text-align: justify; padding-left:50px ; font-size: 20px;">AgroFresh is a digital
+                              marketplace created with
+                              the
+                              vision of connecting farmers directly to customers without the interference of middlemen.
+                              We believe that farmers deserve fair prices for their hard work, while customers deserve
+                              to
+                              enjoy fresh, chemical-free fruits and vegetables straight from the farm.
+                              Our platform ensures transparency, trust, and freshness in every transaction.</p>
+                    </div>
+
+                    <div class="w-50">
+                         <img src="{%static 'agro_app/images/who.jpg'%}" class="who" alt=""
+                              style="margin-right: 10px; border-radius: 25px 25px 25px 25px;">
+
+                    </div>
+               </div>
+
+               <div class="d-flex justify-content-center gap-5">
+                    <div class="w-50 who">
+
+                         <img src="{%static 'agro_app/images/mission.jpg'%}" alt=""
+                              style="width: 100%; margin-left: 10px; border-radius: 25px 25px 25px 25px;">
+                    </div>
+
+                    <div class="w-50 text-center">
+                         <h2 style="margin-top:100px;">2️⃣ What We Stand For </h2>
+
+                         <p style="text-align: justify; padding-right:50px ; font-size: 20px;">At AgroFresh, we provide
+                              a bridge between farmers and customers:
+
+                              Farmers list their fresh fruits, vegetables, and pulses directly on our platform.
+
+                              Customers can browse, compare, and buy produce with guaranteed freshness and fair pricing.
+
+                              We ensure safe, timely, and quality delivery, reducing food wastage and maximizing
+                              farmers’ income.
+
+                              Our mission is not only about food supply — it’s about empowering rural communities,
+                              building trust, and making farm-to-table a reality for every household.</p>
+
+                    </div>
+
+               </div>
+
+               <div class="d-flex justify-content-center gap-5">
+
+                    <div class="w-50 text-center ">
+                         <h2 style="margin-top:100px;">3️⃣ Our Commitment to You </h2>
+
+                         <p style="text-align: justify; padding-left:50px ; font-size: 20px;">For Farmers: Fair pricing,
+                              wider market reach, and respect for their hard work.
+
+                              For Customers: Access to fresh, healthy, and affordable produce.
+
+                              For Communities: Building stronger connections between rural farmers and urban families.
+
+                              At AgroFresh, we are committed to creating a healthier society, a sustainable environment,
+                              and an empowered farming community. Together, we are not just changing how food is sold —
+                              we are reshaping the future of agriculture.</p>
+                    </div>
+                    <div class="w-50 who">
+
+                         <img src="{%static 'agro_app/images/who we are.jpg'%}" alt=""
+                              style="width: 100%; margin-right:10px; border-radius: 25px 25px 25px 25px;">
+                    </div>
+               </div>
+</div>
+
+     </div>
+     {% include 'agro_app/common/footer.html'%}
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+</body>
+
+</html>

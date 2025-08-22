@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein Rich Food</title>
+  {% include 'agro_app/common/common_css.html'%}
+  <style>
+    .bgimage {
+      background-image: url("{%static 'agro_app/images/protein.jpg' %}");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .shape {
+      border-radius: 100px;
+      height: 200px;
+      width: 200px;
+      margin:35px 130px 120px 130px;
+      
+    }
+
+    .flex-container {
+     width: 100%;
+      display: flex;
+      gap:40px;
+      justify-content:center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .shape-image{
+      width: 245px; 
+      height: 245px; 
+      border: solid rgb(53, 94, 48); 
+      border-radius: 50% 0% 50% 0%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-div">
+    {% include 'agro_app/common/header.html' %}
+    <div style="width: 100%; height: 460px;">
+
+      <img src="{%static 'agro_app/images/protein.jpg' %}" alt="" style="width: 100%;height: 100%; filter: brightness(0.7) grayscale(10%);">
+    </div>
+
+    <div class="container-fluid d-flex justify-content-center margin-top:30px">
+      <h1
+        style="font-family: Georgia, 'Times New Roman', Times, serif; margin-top:-42px; font-size:65px; display: block; filter: drop-shadow(0 0 10px #0628d1);">
+        Protein-Rich Food</h1>
+    </div>
+    <p style="font-family: Arial, Helvetica, sans-serif;margin-left:9px;">Protein are essential building blocks of our
+      body. They help in muscle growth, repair tissues, boost immune health, and keep you energetic throughout the day.
+      Including protein-rich foods in your diet is important for both kids and adults.
+      Protein is one of the three major macronutrients (along with carbohydrates and fats) that our body needs to
+      function properly. It is made up of smaller units called amino acids, which are often called the building blocks
+      of life. These amino acids link together in different combinations to form various types of proteins that perform
+      a wide range of functions in the body.</p>
+
+    <div class="flex-container">
+
+      <div class="shape">
+        <img src="{% static 'agro_app/images/tofu.jpg' %}" alt=""
+          class="shape-image">
+        <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Tofu</h2>
+      </div>
+
+      <!-- <div class="shape">
+        <img src="{% static 'agro_app/images/soybean.jpg' %}" alt=""
+          class="shape-image">
+        <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Soybean</h2>
+      </div> -->
+
+
+      <!-- <div class="shape">
+        <img src="{% static 'agro_app/images/seeds.jpg' %}" alt=""
+          class="shape-image">
+        <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;"> Mix Seeds</h2>
+      </div> -->
+
+      <!-- <div class="shape">
+        <img src="{% static 'agro_app/images/peas.jpg' %}" alt=""
+          class="shape-image">
+        <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Green Peas</h2>
+      </div> -->
+
+      <div class="shape">
+        <img src="{% static 'agro_app/images/nuts.jpg' %}" alt=""
+          class="shape-image">
+        <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Nuts</h2>
+      </div>
+
+      <div class="shape">
+        <img src="{% static 'agro_app/images/red beans.jpg' %}" alt=""
+          class="shape-image">
+        <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Kidneybean</h2>
+      </div>
+
+      <div class="shape">
+        <img src="{% static 'agro_app/images/eggs.jpg' %}" alt=""
+          class="shape-image">
+        <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Eggs</h2>
+      </div>
+
+      <div class="shape">
+        <img src="{% static 'agro_app/images/Fish.jpg' %}" alt=""
+          class="shape-image">
+        <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Fish(Salmon)</h2>
+      </div>
+
+      <div class="shape">
+        <img src="{% static 'agro_app/images/chick.jpg' %}" alt=""
+          class="shape-image">
+        <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Chicken</h2>
+      </div>
+
+    </div>
+
+
+
+  </div>
+  <!-- footer code start  -->
+
+  {% include 'agro_app/common/footer.html'%}
+  <!-- footer code end  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

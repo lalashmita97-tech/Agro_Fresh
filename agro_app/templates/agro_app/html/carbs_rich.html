@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbs Rich Food</title>
+   {% include 'agro_app/common/common_css.html'%}
+   <style>
+    .bgimage{
+    background-image: url("{%static 'agro_app/images/carbs.jpg' %}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(10%) brightness(0.7);
+     
+    }
+
+    .shape{
+      border-radius: 100px;
+      height: 200px;
+      width: 200px;
+      margin:35px 130px 120px 130px;
+      
+  
+    }
+
+    .flex-container{
+      width: 100%;
+      display: flex;
+      gap:40px;
+      justify-content:center;
+      align-items: center;
+      flex-wrap: wrap;
+      
+    }
+
+    </style>
+</head>
+<body>
+    {% include 'agro_app/common/header.html'  %}
+<div class="main-div">
+    <div class= "bgimage" style="width: 100%; height: 390px;"> </div>
+
+
+     <div class="container-fluid d-flex justify-content-center">
+      <h1 style="font-family: Georgia, 'Times New Roman', Times, serif; margin-top: -42px; font-size:65px; display: block; filter: drop-shadow(0 0 10px #741188);">Carbohydrate-Rich Food</h1>
+</div>
+
+<p style="font-family: Arial, Helvetica, sans-serif;margin-left:9px;">Carbohydrates, often called "carbs," are one of the most important nutrients your body needs every day. They are the body’s primary source of fuel, especially for the brain, muscles, and nervous system. Whenever we eat food that contains carbohydrates, our body breaks it down into glucose (a type of sugar), which is then absorbed into the blood and used as energy.
+    There are two main types of carbohydrates: simple carbohydrates and complex carbohydrates.
+Simple carbs are found in foods like sugar, sweets, and soft drinks. They are digested quickly and provide fast energy, but only for a short time. On the other hand, complex carbs (like rice, wheat, lentils, and vegetables) take longer to digest and give a steady source of energy, which is healthier for the body.
+Carbohydrates are not just about energy — some of them contain fiber, which is essential for good digestion, preventing constipation, and keeping your gut healthy. Whole grains, fruits, and vegetables are excellent sources of fiber-rich carbs.
+Including the right type of carbohydrates in your daily meals ensures that you stay active, focused, and healthy throughout the day. Foods like brown rice, wheat chapati, oats, maize (makka), lentils (dal), sweet potatoes, and seasonal fruits are great options to include.</p>
+ 
+ <div class="flex-container">
+
+        <div class="shape">
+      <img src="{% static 'agro_app/images/rice.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Rice</h2>
+     </div>
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/tapioca.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Tapioca</h2>
+    </div>
+
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/sweet.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Sweet Potatoes</h2>
+     </div>
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/jack.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Jackfruit</h2>
+     </div>
+
+      <!-- <div class="shape">
+      <img src="{% static 'agro_app/images/dry.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Dry Dates</h2>
+    </div> -->
+
+      <!-- <div class="shape">
+      <img src="{% static 'agro_app/images/banana.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Banana</h2>
+    </div> -->
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/apricots.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Apricots</h2>
+    </div>
+
+      <!-- <div class="shape">
+      <img src="{% static 'agro_app/images/plum.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Plums</h2>
+    </div> -->
+
+      <div class="shape">
+      <img src="{% static 'agro_app/images/beets.jpg' %}" alt="" style="width: 120%; height: 120%; border: solid rgb(53, 94, 48); border-radius: 50% 0% 50% 0%;">
+      <h2 style="font-size: 45px; font-family: 'Times New Roman', Times, serif;">Beetroot</h2>
+    </div>
+
+      </div>
+
+  
+
+
+
+
+
+
+
+
+</div>
+<!-- footer code start  -->
+
+{% include 'agro_app/common/footer.html'%}
+<!-- footer code end  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+</body>
+</html>     

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Products</title>
+   {% include 'agro_app/common/common_css.html'%}
+   <style>
+   .flex-container {
+            display: flex;
+            width: 100%;
+           
+            /* background-color:beige; */
+            flex-wrap:nowrap wrap;
+            gap: 30px;
+            margin-top: 8%;
+        }
+        .item-div {
+            width: 200px;
+            height: 350px;
+            background-color: rgb(145, 162, 128);
+            margin-left: 20px;
+            box-shadow: 0 8px 16px rgb(0, 0, 0.8);
+            transform: scale(1.1);
+            z-index: 10;
+            margin-bottom: 30px;
+        }
+          .item-div img {
+            width: 100%;
+            height: 150px;
+
+
+        }
+</style>
+
+</head>
+<body>
+    {% include 'agro_app/farmer/farmer_header.html'  %}
+
+<div class="main-div">
+
+
+    {% if product_key %}
+
+        <div class="flex-container">
+
+            {% for p in product_key %}
+
+            <div class="item-div" >
+                <img src="/media/{{p.product_pic}}" alt="">
+
+                <h6>Product Name:{{p.product_name}}</h6>
+                <h6>Product category:{{p.product_category}}</h6>
+                <h6>Product Price:{{p.product_price}}</h6>
+                <h6>Farmer Name:{{p.farmer.name}}</h6>
+                <h6>Farmer City:{{p.farmer.city}}</h6>
+               
+
+            </div>
+            {%endfor%}
+        </div>
+        <!-- {% else %} -->
+
+        <!-- <h3 style="text-align: center;color:red">no product found</h3> -->
+
+<!-- 
+        <div class="alert alert-danger alert-dismissible fade show" role="alert"
+            style="width: 50%;margin: auto;text-align: center;">
+            <strong>no product found</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div> -->
+
+        <!-- {% endif %} -->
+
+</div>
+   <!-- footer code start  -->
+{% include 'agro_app/common/footer.html'%}
+<!-- footer code end  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+</body>
+</html>

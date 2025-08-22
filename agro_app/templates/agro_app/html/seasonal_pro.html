@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seasonal Fruits & Vegetables | AgroFresh</title>
+   {% include 'agro_app/common/common_css.html'%}
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background:linear-gradient(to right,rgb(189, 206, 155),rgb(180, 217, 211));
+    }
+
+    header {
+      background-color:  #557922;
+      color: whitesmoke;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .season-section {
+      padding: 40px 20px;
+      width: 900px;
+      margin: auto;
+    }
+
+    .season-box {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      margin-bottom: 30px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .season-box img {
+      width: 200px;
+      border-radius: 10px;
+      border: 2px solid #29a934;
+    }
+
+    .season-info {
+      flex: 1;
+    }
+
+    .season-info h2 {
+      margin-top: 0;
+      color: #3b8269;
+    }
+
+   
+  </style>
+</head>
+<body>
+<div class="main-div">  
+   {% include 'agro_app/common/header.html'  %}
+
+  <header>
+    <h1>🍒Seasonal Fruits & Vegetables🥦</h1>
+    <p>Enjoy the freshest produce grown in its peak season!</p>
+  </header>
+
+  <div class="season-section">
+    <div class="season-box">
+      <img src="{% static 'agro_app/images/summer.jpg' %}" alt="Summer Fruits">
+      <div class="season-info">
+        <h2>🌞 Summer Season</h2>
+        <p><strong>Fruits:</strong> Mangoes, Watermelons, Litchis, Papayas, Muskmelons</p>
+        <p><strong>Vegetables:</strong> Cucumbers, Bottle Gourd, Bitter Gourd, Tomato, Lady Finger</p>
+      </div>
+    </div>
+
+    <div class="season-box">
+      <img src="{% static 'agro_app/images/winter.jpg' %}" alt="Winter Vegetables">
+      <div class="season-info">
+        <h2>❄️ Winter Season</h2>
+        <p><strong>Fruits:</strong> Apples, Oranges, Guavas, Strawberries, Grapes</p>
+        <p><strong>Vegetables:</strong> Carrots, Cauliflower, Broccoli, Spinach, Green Peas</p>
+      </div>
+    </div>
+
+    <div class="season-box">
+      <img src="{% static 'agro_app/images/rain.jpg' %}" alt="Monsoon Foods">
+      <div class="season-info">
+        <h2>🌧️ Monsoon Season</h2>
+        <p><strong>Fruits:</strong> Jamun, Plums, Pears, Apples, Cherries</p>
+        <p><strong>Vegetables:</strong> Corn, Brinjal, Ridge Gourd, Snake Gourd, Spinach</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>   
+ <!-- footer code start  -->
+{% include 'agro_app/common/footer.html'%}
+<!-- footer code end  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+</body>
+</html>

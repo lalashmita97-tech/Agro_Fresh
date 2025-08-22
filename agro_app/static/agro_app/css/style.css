@@ -1,0 +1,23 @@
+body,html
+{
+
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    /* background:linear-gradient(to right,#6b9c2f,#b6cc9d); */
+    background:linear-gradient(to right,rgb(189, 206, 155),rgb(180, 217, 211));
+}
+
+.main-div{
+    flex:1
+}
+
+/* .nav-link{
+  color: rgb(198, 207, 198);
+  font-size: medium;
+} */
+
+
+
+
+/* #6b9c2f */

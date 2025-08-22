@@ -1,0 +1,65 @@
+{% load static %}
+<style>
+.nav-link{
+  color: rgb(21, 47, 21);
+  font-size: medium;
+}
+</style>
+ <nav class="navbar navbar-expand-lg" style="background-color: #8ed1fc;"> <!-- rgb(47, 15, 17) -->
+  <div class="container-fluid">
+   <img src="{% static 'agro_app/images/logo.jpg' %}" alt="" style="width: 50x; height: 50px; border-radius: 20%;">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about/">About Us</a>
+        </li>
+         
+       <li class="nav-item">
+          <a class="nav-link" href="/contact/">Contact Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/register/">Register</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/login/">Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/feedback/">Feedback</a>
+        </li>
+
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/view_products/">Search Products</a>
+        </li>
+          
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nutrition Info
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/protein_rich/">🥚 Protein-Rich Foods</a></li>
+            <li><a class="dropdown-item" href="/carbs_rich/">🍞 Carbohydrate Sources</a></li>
+            <li><a class="dropdown-item" href="/fats_rich/">🥑 Healthy Fats</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/seasonal_pro/">🌽 Seasonal Picks</a></li>
+          </ul>
+        </li>
+       
+      </ul>
+      <form class="d-flex">
+        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button> -->
+      </form>
+    </div>
+  </div>
+</nav>
