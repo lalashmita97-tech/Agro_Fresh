@@ -14,8 +14,9 @@
       height: auto;
       background-color: rgb(165, 167, 169);
       /* border: 2px solid rgb(55, 9, 18); */
-      padding: 40px  80px 10px 80px;
-      margin-top: 30px;
+      padding: 40px 80px 10px 80px;
+      margin-bottom: 30px;
+      margin-top: 15px;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur 12px;
       border: 3px solid rgba(255, 255, 255, 0.1);
@@ -24,11 +25,11 @@
       z-index: 1;
       transition: 0.4s ease;
     }
-    
-        .div-form:hover {
-            box-shadow: 0 0px 35px #6d7114;
-            transform: scale(1.02);
-        }
+
+    .div-form:hover {
+      box-shadow: 0 0px 35px #6d7114;
+      transform: scale(1.02);
+    }
 
     .flex-container {
       display: flex;
@@ -43,7 +44,9 @@
   <div class="main-div">
     {% include 'agro_app/common/header.html' %}
 
-    <h3 style="font-family: 'Times New Roman', Times, serif;background-color: rgb(21, 47, 21);color: rgb(155, 155, 110); text-align: center;">👉"Your
+    <h3
+      style="font-family: 'Times New Roman', Times, serif;background-color: rgb(21, 47, 21);color: rgb(155, 155, 110); text-align: center;">
+      👉"Your
       opinion matters — help us serve you better."👈</h3>
 
     <form action="/feedback/" method="post">
@@ -53,7 +56,8 @@
         <div class="div-form">
           <div class="w-100 mx-auto" style="margin-top: 5px;">
             <h3 class="text-center"
-              style="font-family:Georgia, 'Times New Roman', Times, serif;color: rgb(7, 25, 42); font-size: 36px;">We’d Love Your Feedback!</h3>
+              style="font-family:Georgia, 'Times New Roman', Times, serif;color: rgb(7, 25, 42); font-size: 36px;">We’d
+              Love Your Feedback!</h3>
             <div class="form-floating mb-3" style="filter: drop-shadow(0 0 10px #a86718);">
               <input type="text" class="form-control" id="floatingInput" placeholder="name" name="name" required>
               <label for="floatingInput">Name</label>
@@ -96,7 +100,7 @@
     <div class="alert alert-danger alert-dismissible fade show" role="alert"
       style="width: 50%;margin: auto;text-align: center;">
       <strong>{{m}}</strong>
-       <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-success">Submit</button>
     </div>
     {% endfor %}
 

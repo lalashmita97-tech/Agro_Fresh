@@ -8,18 +8,19 @@
   <title>Contact</title>
 
   {% include 'agro_app/common/common_css.html'%}
-<style>
-   .div-form {
+  <style>
+    .div-form {
       width: 37%;
       height: auto;
       background-color: rgb(165, 167, 169);
       padding: 20px 20px 20px 20px;
       margin-top: 10px;
+      margin-bottom: 19px;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur 12px;
       border: 3px solid rgba(255, 255, 255, 0.1);
       border-radius: 20px;
-      box-shadow: 0 0px 25px rgba(0, 255, 255, 0.2);
+      box-shadow: 0 0px 25px rgba(9, 70, 102, 0.182);
       z-index: 1;
       transition: 0.4s ease;
     }
@@ -28,41 +29,42 @@
       box-shadow: 0 0px 35px #6d7114;
       transform: scale(1.02);
     }
-    </style>  
+  </style>
 </head>
 
 <body>
 
   {% include 'agro_app/common/header.html' %}
 
-  <h3 style="font-family: 'Times New Roman', Times,serif;text-align: center; background-color: rgb(21, 47, 21);color: rgb(155, 155, 110)">📩 "We’re here to
+  <h3
+    style="font-family: 'Times New Roman', Times,serif;text-align: center; background-color: rgb(21, 47, 21);color: rgb(155, 155, 110)">
+    📩 "We’re here to
     help — from field to doorstep!" 📩</h3>
   <div class="main-div">
 
-      <div class="container-fluid d-flex justify-content-center">
+    <div class="container-fluid d-flex justify-content-center">
 
-        
-    <form  action="/contact/" method="post">
-      {% csrf_token%}
-        <div class="div-form"  style="margin-right:69px; width: 500px;">
+
+      <form action="/contact/" method="post">
+        {% csrf_token%}
+        <div class="div-form" style="margin-right:69px; width: 500px;">
           <h1 class="text-center"
             style="font-family:Georgia, 'Times New Roman', Times, serif;color: rgb(10, 26, 43);font-size: 70px;margin-top: 20px;">
             Contact Us</h1>
-          
-        <div class="form-floating mb-3"
-            style="display: block; filter: drop-shadow(0 0 10px #20616b);">
+
+          <div class="form-floating mb-3" style="display: block; filter: drop-shadow(0 0 10px #20616b);">
             <input type="text" class="form-control" id="floatingInput" placeholder="name" name="name" required>
             <label for="floatingInput">Name</label>
           </div>
 
-          <div class="form-floating mb-3"
-            style=" display: block; filter: drop-shadow(0 0 10px #20616b);">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" required>
+          <div class="form-floating mb-3" style=" display: block; filter: drop-shadow(0 0 10px #20616b);">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email"
+              required>
             <label for="floatingInput">Email address</label>
           </div>
-          <div class="form-floating mb-3"
-            style="display: block; filter: drop-shadow(0 0 10px #20616b);">
-            <input type="number" class="form-control" id="floatingInput" placeholder="phone_number" name="phone" required>
+          <div class="form-floating mb-3" style="display: block; filter: drop-shadow(0 0 10px #20616b);">
+            <input type="number" class="form-control" id="floatingInput" placeholder="phone_number" name="phone"
+              required>
             <label for="floatingInput">Phone Number</label>
           </div>
 
@@ -78,23 +80,24 @@
           </div>
 
         </div>
-    </form>
-</div>
+      </form>
+    </div>
 
-{% if messages %}
-{% for m in messages %}
- <div class="alert alert-danger alert-dismissible fade show" role="alert" style="width: 50%;margin: auto;text-align: center;">
-  <strong>{{m}}</strong> 
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-
-{% endfor %}
+    {% if messages %}
+    {% for m in messages %}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert"
+      style="width: 50%;margin: auto;text-align: center;">
+      <strong>{{m}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 
 
-  {% endif %}
+    {% endfor %}
 
-</div>
+
+    {% endif %}
+
+  </div>
 
 
   </div>

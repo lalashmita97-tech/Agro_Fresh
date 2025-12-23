@@ -1,247 +1,281 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-   {% include 'agro_app/common/common_css.html'%}
-   <style>
-    .w-100{
-        height: 78vh;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  {% include 'agro_app/common/common_css.html'%}
+  <style>
+    .w-100 {
+      height: 78vh;
     }
 
-        .feedback-div{
-        display: flex;
-        margin-left:50px;
-        flex-wrap:wrap;
-        margin-top: 30px;
-        justify-content: center;
-        
-        }
-        .feedback-card{
-        padding: 50px;
-        width:350px;
-        height: 350px;
-        margin:15px;
-        border-radius: 10px;
-        transition: transform 0.5s; 
-        box-shadow:0 8px 16px rgb(0,0,0.8);
-        margin-bottom: 90px;
-        margin-top: 90px;
-        
-        }
-       
-          
-        .feedback-card:hover {
-                    transform: scale(1.1);
-              
-                    z-index: 10;
-                }
-        
-        
-                h6{
+    .feedback-div {
+      display: flex;
+      margin-left: 50px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      justify-content: center;
 
-                  color:blueviolet;
-                  font-family: Verdana;
-              
-                  margin-left: 10px;
-                }
+    }
 
-                
+    .feedback-card {
+      padding: 50px;
+      width: 350px;
+      height: 350px;
+      margin: 15px;
+      border-radius: 10px;
+      transition: transform 0.5s;
+      box-shadow: 0 8px 16px rgb(0, 0, 0.8);
+      margin-bottom: 90px;
+      margin-top: 90px;
+
+    }
 
 
+    .feedback-card:hover {
+      transform: scale(1.1);
 
-/* About Section */
-.about {
-padding: 50px 20px;
-text-align: center;
-}
-.about h2 {
-color: #3d0f0e;
-font-size: 4rem;
-margin-bottom: 20px;
-}
-.about p {
-/* max-width: 800px; */
-margin: auto;
-font-size: 1.2rem;
-color: #555;
-}
-
-/* Benefits Section */
-.benefits {
-padding: 50px 20px;
-}
-.benefits h2 {
-text-align: center;
-color: #301d1d;
-margin-bottom: 40px;
-}
-.benefit-boxes {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-}
-.box {
-height: 160%;  
-background: rgb(168, 205, 191);
-padding: 20px;
-border-radius: 15px;
-box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-transition: 0.3s ease;
-}
-.box:hover {
-transform: translateY(-5px);
-box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
-}
-.box h3 {
-color: #5a6126;
-margin-bottom: 10px;
-}
+      z-index: 10;
+    }
 
 
-/* top heading text in slidedown */
-.pic-content {
-               position: absolute;
-               top:5%;
-               left: 50%;
-               transform: translate(-50%,-50%);
-               color: rgb(201, 194, 194);
-               animation: slideDown 2s ease-out forwards;
-               text-shadow: 2px 2px 5px #000;
-               /* top:100px; */
-               margin:50px;
-          }
-          .pic-content:hover{
-               color: rgb(81, 18, 49);
-          }
-          @keyframes slideDown{
-          from{
-               /* top:-100px; */
-               transform: translate(-50%,-100%);
-               opacity:0;
-          }
-          to{
-               /* top:30%; */
-               transform: translate(-50%,0%);
-               opacity: 1;
-          }
-          }
+    h6 {
 
-</style>
+      color: blueviolet;
+      font-family: Verdana;
+
+      margin-left: 10px;
+    }
+
+
+
+
+
+    /* About Section */
+    .about {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      color: #3d0f0e;
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      /* max-width: 800px; */
+      margin: auto;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    /* Benefits Section */
+    .benefits {
+      padding: 50px 20px;
+    }
+
+    .benefits h2 {
+      text-align: center;
+      color: #301d1d;
+      margin-bottom: 40px;
+    }
+
+    .benefit-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .box {
+      height: 160%;
+      background: rgb(168, 205, 191);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .box h3 {
+      color: #5a6126;
+      margin-bottom: 10px;
+    }
+
+
+    /* top heading text in slidedown */
+    .pic-content {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgb(201, 194, 194);
+      animation: slideDown 2s ease-out forwards;
+      text-shadow: 2px 2px 5px #000;
+      /* top:100px; */
+      margin: 50px;
+    }
+
+    .pic-content:hover {
+      color: rgb(255, 169, 255);
+    }
+
+    @keyframes slideDown {
+      from {
+        /* top:-100px; */
+        transform: translate(-50%, -100%);
+        opacity: 0;
+      }
+
+      to {
+        /* top:30%; */
+        transform: translate(-50%, 0%);
+        opacity: 1;
+      }
+    }
+  </style>
 
 </head>
+
 <body>
-    {% include 'agro_app/common/header.html'  %}
- <div class="container-fluid" style="background-color:#1a2d19;;">
-    <h3 style="text-align: center;color:rgb(155, 155, 110);font-family:'Times New Roman', Times, serif"> 🍀"AgroFresh – Fresh from Farmers, Fair for All!"🍀 </h3>
-    </div>
-<!-- {carosal start} -->
-
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  {% include 'agro_app/common/header.html' %}
+  <div class="container-fluid" style="background-color:#1a2d19;;">
+    <h3 style="text-align: center;color:rgb(155, 155, 110);font-family:'Times New Roman', Times, serif"> 🌱Welcome to
+      AgroFresh-Where Farmers and Customers Connect Directly!🌱 </h3>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" style="filter: grayscale(15%) brightness(0.8);">
-      <img src="{%static 'agro_app/images/home5.jpg'%}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h2 style="color:white;">From Our Fields to Your Table</h2>
-        <p style="color:white;">"At AgroFresh, every harvest tells a story of dedication and hard work. We connect you directly with farmers, ensuring you receive fresh, chemical-free, and naturally grown produce. No middlemen, no hidden costs — just pure freshness from the farm to your home.”</p>
+  <!-- {carosal start} -->
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="filter: grayscale(15%) brightness(0.8);">
+        <img src="{%static 'agro_app/images/home5.jpg'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 style="color:white;">From Our Fields to Your Table</h2>
+          <p style="color:white;">"At AgroFresh, every harvest tells a story of dedication and hard work. We connect you
+            directly with farmers, ensuring you receive fresh, chemical-free, and naturally grown produce. No middlemen,
+            no hidden costs — just pure freshness from the farm to your home.”</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="filter: grayscale(15%) brightness(0.7);">
+        <img src="{%static 'agro_app/images/farm.jpg'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Empowering Farmers, Enriching Lives</h2>
+          <p>“AgroFresh ensures farmers get fair prices for their hard work, while customers enjoy affordable,
+            farm-fresh produce. Together, we are building a healthier community and a stronger connection between
+            farmers and families.”</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="filter: grayscale(15%) brightness(0.7);">
+        <img src="{%static 'agro_app/images/who we are.jpg'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Freshness You Can Trust</h2>
+          <p>“Our platform brings you the goodness of freshly harvested fruits and vegetables. Handpicked at the peak of
+            ripeness, packed with nutrients, and delivered with care — because you and your family deserve nothing but
+            the best.”</p>
+        </div>
       </div>
     </div>
-    <div class="carousel-item" style="filter: grayscale(15%) brightness(0.7);">
-      <img src="{%static 'agro_app/images/farm.jpg'%}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h2>Empowering Farmers, Enriching Lives</h2>
-        <p>“AgroFresh ensures farmers get fair prices for their hard work, while customers enjoy affordable, farm-fresh produce. Together, we are building a healthier community and a stronger connection between farmers and families.”</p>
-      </div>
-    </div>
-    <div class="carousel-item" style="filter: grayscale(15%) brightness(0.7);">
-      <img src="{%static 'agro_app/images/who we are.jpg'%}" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h2>Freshness You Can Trust</h2>
-        <p>“Our platform brings you the goodness of freshly harvested fruits and vegetables. Handpicked at the peak of ripeness, packed with nutrients, and delivered with care — because you and your family deserve nothing but the best.”</p>
-      </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+    <div class="pic-content">
+      <h1
+        style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;font-size: 88px;">
+        AgroFresh Hub</h1>
+      <p><strong>“Where Farmers and Families Meet”</strong></p>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 
-   <div class="pic-content">
-<h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;font-size: 88px;">AgroFresh Hub</h1>
-    <p><strong>“Where Farmers and Families Meet”</strong></p> </div>
-</div>
+  <!-- {carosal end} -->
+  <hr style="border:3px solid #142e15;">
 
-<!-- {carosal end} -->
- <hr style="border:3px solid #142e15;">
-
-<div class="main-div">
+  <div class="main-div">
 
     <div class="container">
 
-  <div class="about">    
-      <h2>AgroFresh Journey</h2>
-<p>
-"Agro fresh" is an online platform that connects farmers directly with customers. Farmers often face problems selling their products because they depend on middlemen who take most of the profit. On the other side, customers want fresh and affordable food but don’t know where to find it.
-This platform allows farmers to add their fresh produce like vegetables, fruits, and grains. Customers can view the products and talk directly to the farmer through WhatsApp. This helps farmers earn more and gives customers access to healthy, local products.
+      <div class="about">
+        <h2>AgroFresh Journey</h2>
+        <p>
+          "AgroFresh" is an online platform that connects farmers directly with customers. Farmers often face problems
+          selling their products because they depend on middlemen who take most of the profit. On the other side,
+          customers want fresh and affordable food but don’t know where to find it.
+          This platform allows farmers to add their fresh produce like vegetables, fruits, and grains. Customers can
+          view the products and talk directly to the farmer through WhatsApp. This helps farmers earn more and gives
+          customers access to healthy, local products.
 
-</p>
-</div> 
+        </p>
+      </div>
 
-<div class="benefits">
-<h2>How AgroFresh Helps You</h2>
-<div class="benefit-boxes">
-<div class="box">
-<h3>🌾 For Farmers</h3>
-<p>Get the real worth of your produce without middlemen. AgroFresh ensures fair trade, boosting farmers' income and livelihood.</p>
-</div>
-<div class="box">
-<h3>🥦 For Customers</h3>
-<p>Buy fresh, organic, and chemical-free fruits & vegetables directly from farms at affordable prices.</p>
-</div>
-<div class="box">
-<h3>🌍 For Everyone</h3>
-<p>Contribute to a sustainable food system that supports local farmers and promotes healthy living.</p>
-</div>
-</div>
-</div>
+      <div class="benefits">
+        <h2>How AgroFresh Helps You</h2>
+        <div class="benefit-boxes">
+          <div class="box">
+            <h3>🌾 For Farmers</h3>
+            <p>Get the real worth of your produce without middlemen. AgroFresh ensures fair trade, boosting farmers'
+              income and livelihood.</p>
+          </div>
+          <div class="box">
+            <h3>👨🏼‍👩🏻 For Customers</h3>
+            <p>Buy fresh, organic, and chemical-free fruits & vegetables directly from farms at affordable prices.</p>
+          </div>
+          <div class="box">
+            <h3>🌍 For Everyone</h3>
+            <p>Contribute to a sustainable food system that supports local farmers and promotes healthy living.</p>
+          </div>
+        </div>
+      </div>
 
-</div>
+    </div>
 
-<div class="justify-content-center" style="margin-top:100px; text-align: center;">
-<h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #3d0f0e;">Testimonials</h1>
-
- 
-<div class="feedback-div">
-  <!-- <h5 style="text-align: center;">Customer Review</h5> -->
-{% for f in feedback_key %}
-<div class="feedback-card">
-  <h5 style="text-align: center;"><u>Customer Review</u></h5>
-    <h5>Rating:{{f.rating}}</h5>
-    <h5>Remarks:{{f.remarks}}</h5>
-    <h5>Name:{{f.name}}</h5>
-    <h5>Email:{{f.email}}</h5>
+    <div class="justify-content-center" style="margin-top:100px; text-align: center;">
+      <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #3d0f0e;">Testimonials
+      </h1>
 
 
-</div>
-{%endfor%}
-</div>
+      <div class="feedback-div">
+        <!-- <h5 style="text-align: center;">Customer Review</h5> -->
+        {% for f in feedback_key %}
+        <div class="feedback-card">
+          <h5 style="text-align: center;"><u>Customer Review</u></h5>
+          <h5>Rating:{{f.rating}}</h5>
+          <h5>Remarks:{{f.remarks}}</h5>
+          <h5>Name:{{f.name}}</h5>
+          <h5>Email:{{f.email}}</h5>
 
-</div>
 
-</div>
-{% include 'agro_app/common/footer.html'%}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+        </div>
+        {%endfor%}
+      </div>
+
+    </div>
+
+  </div>
+  {% include 'agro_app/common/footer.html'%}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

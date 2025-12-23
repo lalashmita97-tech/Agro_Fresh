@@ -8,14 +8,12 @@
   <title>Register</title>
   {% include 'agro_app/common/common_css.html'%}
   <style>
- 
-
     .div-form {
       width: 37%;
       height: auto;
       background-color: rgb(165, 167, 169);
       padding: 20px 20px 20px 20px;
-      margin-top: 10px;
+      margin-top: -5px;
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur 12px;
       border: 3px solid rgba(255, 255, 255, 0.1);
@@ -48,7 +46,7 @@
     <form method="post" action="/register/" enctype="multipart/form-data">
       {% csrf_token %}
 
-      <div class="container-fluid d-flex justify-content-center" style="margin-top:5px; margin-bottom: 15px;">
+      <div class="container-fluid d-flex justify-content-center" style="margin-top:0px; margin-bottom: 25px;">
         <div class=" div-form" style="padding: 20px 20px 20px 20px;">
           <div class="form-floating mb-3"
             style=" margin-top: 25px; display: block; filter: drop-shadow(0 0 10px #53170d);">
@@ -57,49 +55,43 @@
             <label for="floatingInput">Enter Email here</label>
           </div>
 
-          <div class="form-floating mb-3"
-            style=" display: block; filter: drop-shadow(0 0 10px  #53170d);">
+          <div class="form-floating mb-3" style=" display: block; filter: drop-shadow(0 0 10px  #53170d);">
             <input type="password" class="form-control" id="floatingInput" placeholder="password" name="password"
               required>
             <label for="floatingInput">Enter password here</label>
           </div>
 
-          <div class="form-floating mb-3"
-            style=" display: block; filter: drop-shadow(0 0 10px #53170d);">
+          <div class="form-floating mb-3" style=" display: block; filter: drop-shadow(0 0 10px #53170d);">
             <input type="text" class="form-control" id="floatingTextarea2" placeholder="name" name="name" required>
             <label for="floatingPassword">Enter name here</label>
           </div>
 
-          <div class="form-floating mb-3"
-            style=" display: block; filter: drop-shadow(0 0 10px#53170d);">
+          <div class="form-floating mb-3" style=" display: block; filter: drop-shadow(0 0 10px#53170d);">
             <input type="number" class="form-control" id="floatingInput" placeholder="phone_number" name="phone"
               required>
             <label for="floatingInput">Enter Phone Number here</label>
           </div>
 
 
-          <div class="form-floating mb-3"
-            style="display: block; filter: drop-shadow(0 0 10px #53170d);">
+          <div class="form-floating mb-3" style="display: block; filter: drop-shadow(0 0 10px #53170d);">
             <input type="text" class="form-control" id="floatingInput" placeholder="city" name="city" required>
             <label for="floatingInput">Enter city here</label>
           </div>
 
 
-          <div class="form-floating mb-3"
-            style="display: block; filter: drop-shadow(0 0 10px #53170d);">
+          <div class="form-floating mb-3" style="display: block; filter: drop-shadow(0 0 10px #53170d);">
             <input type="text" class="form-control" id="floatingInput" placeholder="address" name="address" required>
             <label for="floatingInput">Enter address here</label>
           </div>
 
-          <div class="form-floating mb-3"
-            style="display: block; filter: drop-shadow(0 0 10px #53170d);">
+          <div class="form-floating mb-3" style="display: block; filter: drop-shadow(0 0 10px #53170d);">
             <input type="file" class="form-control" placeholder="Enter profile_pic" name="profile_pic" required>
             <label for="profile">Enter Profile Pic</label>
           </div>
 
 
           <div class="container-fluid d-flex justify-content-center">
-          <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-success">Submit</button>
           </div>
 
         </div>

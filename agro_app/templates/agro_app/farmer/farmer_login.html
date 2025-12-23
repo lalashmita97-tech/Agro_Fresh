@@ -28,8 +28,8 @@
             height: 350px;
             background-color: rgb(165, 167, 169);
             /* border: 2px solid rgb(55, 9, 18); */
-            padding:40px 80px 80px 80px;
-            margin-top: 40px;
+            padding: 40px 80px 80px 80px;
+            margin-top: 23px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur 12px;
             border: 3px solid rgba(255, 255, 255, 0.1);
@@ -65,7 +65,9 @@
     {% include 'agro_app/common/header.html' %}
     <!-- navbar code ends -->
 
-    <h3 style="font-family: 'Times New Roman', Times,serif;text-align: center; background-color: rgb(21, 47, 21);color: rgb(155, 155, 110)">🔗🔗 “Your
+    <h3
+        style="font-family: 'Times New Roman', Times,serif;text-align: center; background-color: rgb(21, 47, 21);color: rgb(155, 155, 110)">
+        🔗🔗 “Your
         Farm-to-Family Journey Starts Here” 🔗🔗</h3>
     {% if messages %}
     {% for m in messages %}
@@ -98,7 +100,8 @@
 
                 <form action="/login/" method="post">
                     {% csrf_token %}
-                <h2 class="text-center" style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:45px;">Login</h2>
+                    <h2 class="text-center"
+                        style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:45px;">Login</h2>
                     <div class="input-group mb-3" style="filter: drop-shadow(0 0 10px #6d7114);">
                         <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
                         <input type="email" class="form-control" placeholder="Email" name="email" required>

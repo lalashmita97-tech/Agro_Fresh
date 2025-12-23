@@ -25,13 +25,15 @@
             transform: scale(1.1);
             z-index: 10;
             margin-bottom: 30px;
+            /* border-radius: 10px 10px 10px 10px; */
         }
           .item-div img {
             width: 100%;
             height: 150px;
-
-
+            
         }
+
+      
 </style>
 
 </head>
@@ -39,7 +41,10 @@
     {% include 'agro_app/farmer/farmer_header.html'  %}
 
 <div class="main-div">
-
+ 
+     <h3
+        style="font-size: 65px;font-family: Georgia, 'Times New Roman', Times, serif;text-align: center;color: rgb(122, 20, 70); margin-top:50px; margin-bottom:24px;">
+        👇 Your Products 👇</h3>
 
     {% if product_key %}
 
@@ -64,12 +69,12 @@
 
         <!-- <h3 style="text-align: center;color:red">no product found</h3> -->
 
-<!-- 
-        <div class="alert alert-danger alert-dismissible fade show" role="alert"
+
+        <!-- <div class="alert alert-danger alert-dismissible fade show" role="alert"
             style="width: 50%;margin: auto;text-align: center;">
             <strong>no product found</strong>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div> -->
+        </div>  -->
 
         <!-- {% endif %} -->
 
